@@ -1,0 +1,17 @@
+ALGORITHM CHEK
+VAR
+    arr : ARRAY_OF_INTEGER
+   j,x,n,i:INTEGER=0
+
+BEGIN
+    n:=length(arr)
+    FOR i FROM 0 TO n-1 STEP step  DO
+    x=:arr[i]
+    j := i -1
+    WHILE j >= 0 AND arr [j]> x DO
+        arr[j+1]:= arr[j]
+        j:=j-1
+    END_WHILE
+     arr[j+1] :=x 
+    END_FOR
+END
